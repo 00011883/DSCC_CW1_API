@@ -140,9 +140,9 @@ GO
 DROP TABLE [dbo].[Games]
 DROP TABLE [dbo].[Authors]
 
-*/
-
 select *
 from [dbo].[Games]
 select *
 from [dbo].[Authors]
+
+*/
