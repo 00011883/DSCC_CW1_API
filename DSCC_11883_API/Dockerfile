@@ -10,7 +10,7 @@ COPY ["DSCC_11883_API.csproj", "DSCC_11883_API/"]
 RUN dotnet restore "./DSCC_11883_API/DSCC_11883_API.csproj"
 COPY . .
 WORKDIR "/src/DSCC_11883_API"
-RUN dotnet build "DSCC_11883_API.csproj" -c Release -o /app/build
+RUN dotnet build "./DSCC_11883_API/DSCC_11883_API.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "DSCC_11883_API.csproj" -c Release -o /app/publish /p:UseAppHost=false
