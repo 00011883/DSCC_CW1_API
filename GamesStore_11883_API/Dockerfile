@@ -6,7 +6,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["GamesStore_11883_API.csproj", "GamesStore_11883_API/"]
+COPY ["GamesStore_11883_API/GamesStore_11883_API.csproj", "GamesStore_11883_API/"]
 COPY ["DAL_11883/DAL_11883.csproj", "DAL_11883/"]
 RUN dotnet restore "GamesStore_11883_API/GamesStore_11883_API.csproj"
 COPY . .
