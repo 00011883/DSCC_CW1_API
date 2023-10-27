@@ -6,18 +6,18 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["DSCC_11883_API.csproj", "DSCC_11883_API/"]
-RUN dotnet restore "DSCC_11883_API/DSCC_11883_API.csproj"
+COPY ["GamesStore_11883_API.csproj", "GamesStore_11883_API/"]
+RUN dotnet restore "GamesStore_11883_API/GamesStore_11883_API.csproj"
 
-WORKDIR "/src/DSCC_11883_API"
+WORKDIR "/src/GamesStore_11883_API"
 COPY . .
 
-RUN dotnet build "DSCC_11883_API.csproj" -c Release -o /app/build
+RUN dotnet build "GamesStore_11883_API.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "DSCC_11883_API.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "GamesStore_11883_API.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "DSCC_11883_API.dll"]
+ENTRYPOINT ["dotnet", "GamesStore_11883_API.dll"]
