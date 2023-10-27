@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Games\\MyFolder\\WIUT\\lvl6\\DSCC\\DSCC_11883_API\\DSCC_11883_API\\DSCC_11883_API.csproj": {}
+    "D:\\Games\\MyFolder\\WIUT\\lvl6\\DSCC\\test\\DSCC_11883_API\\DSCC_11883_API.csproj": {}
   },
   "projects": {
-    "D:\\Games\\MyFolder\\WIUT\\lvl6\\DSCC\\DSCC_11883_API\\DSCC_11883_API\\DSCC_11883_API.csproj": {
+    "D:\\Games\\MyFolder\\WIUT\\lvl6\\DSCC\\test\\DSCC_11883_API\\DSCC_11883_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Games\\MyFolder\\WIUT\\lvl6\\DSCC\\DSCC_11883_API\\DSCC_11883_API\\DSCC_11883_API.csproj",
+        "projectUniqueName": "D:\\Games\\MyFolder\\WIUT\\lvl6\\DSCC\\test\\DSCC_11883_API\\DSCC_11883_API.csproj",
         "projectName": "DSCC_11883_API",
-        "projectPath": "D:\\Games\\MyFolder\\WIUT\\lvl6\\DSCC\\DSCC_11883_API\\DSCC_11883_API\\DSCC_11883_API.csproj",
+        "projectPath": "D:\\Games\\MyFolder\\WIUT\\lvl6\\DSCC\\test\\DSCC_11883_API\\DSCC_11883_API.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Games\\MyFolder\\WIUT\\lvl6\\DSCC\\DSCC_11883_API\\DSCC_11883_API\\obj\\",
+        "outputPath": "D:\\Games\\MyFolder\\WIUT\\lvl6\\DSCC\\test\\DSCC_11883_API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.17.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
