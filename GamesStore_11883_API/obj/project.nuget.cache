@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jjDITByOkd0USD3bq88b4nwiefGw3Va+8aL4S6ymI6fnmTEEOklyZcjTRYGa+/tnIkWfkrfVbm9zHu0QblRvFQ==",
+  "dgSpecHash": "eEHNSQD7AwumbIMVFPC7AEat9qUNITTy6t4x/MXBTOSuTByGE5B2nO/4P1uLn7KeK0Imoa9PbAMNzmiKBwRQOQ==",
   "success": true,
   "projectFilePath": "D:\\Games\\MyFolder\\WIUT\\lvl6\\DSCC\\test\\GamesStore_11883_API\\GamesStore_11883_API.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.identity.client\\3.0.8\\microsoft.identity.client.3.0.8.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.2\\microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\runtime.any.system.collections\\4.3.0\\runtime.any.system.collections.4.3.0.nupkg.sha512",
