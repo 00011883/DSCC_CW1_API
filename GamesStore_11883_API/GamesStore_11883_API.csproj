@@ -12,6 +12,7 @@
   <PropertyGroup>
     <ContainerImageName>games-store-11883-api</ContainerImageName>
     <ContainerImageTags>latest</ContainerImageTags>  
+    <SelfContained>true</SelfContained>
     <PublishProfile>DefaultContainer</PublishProfile>
     <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
