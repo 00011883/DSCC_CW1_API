@@ -7,7 +7,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["DSCC_11883_API.csproj", "DSCC_11883_API/"]
-RUN dotnet restore "DSCC_11883_API.csproj"
+RUN dotnet restore "./DSCC_11883_API/DSCC_11883_API.csproj"
 COPY . .
 WORKDIR "/src/DSCC_11883_API"
 RUN dotnet build "DSCC_11883_API.csproj" -c Release -o /app/build
