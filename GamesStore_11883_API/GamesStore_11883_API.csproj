@@ -2,11 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <ContainerImageName>games-store-11883-api</ContainerImageName>
-    <ContainerImageTags>latest</ContainerImageTags>  
-    <PublishProfile>DefaultContainer</PublishProfile>
-    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +9,13 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <ContainerImageName>games-store-11883-api</ContainerImageName>
+    <ContainerImageTags>latest</ContainerImageTags>  
+    <PublishProfile>DefaultContainer</PublishProfile>
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
 
 
 </Project>
