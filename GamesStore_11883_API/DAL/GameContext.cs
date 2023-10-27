@@ -1,7 +1,7 @@
 ﻿using GamesStore_11883_API.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace GamesStore_11883_API.DAL_11883
+namespace GamesStore_11883_API.DAL
 {
     public class GameContext : DbContext
     {

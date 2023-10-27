@@ -1,4 +1,4 @@
-﻿using GamesStore_11883_API.DAL_11883;
+﻿using GamesStore_11883_API.DAL;
 using GamesStore_11883_API.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
