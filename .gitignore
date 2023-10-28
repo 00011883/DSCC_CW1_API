@@ -1,3 +1,3 @@
-./GameStore_11883_API/bin/
-./GameStore_11883_API/obj
-./packages/
+**/bin
+**/obj
+.vs
