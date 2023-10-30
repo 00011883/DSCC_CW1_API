@@ -31,8 +31,7 @@ namespace GamesStore_11883_API.Repository
         }
         public void InsertGame(Game game)
         {
-            game.Author =
-            _dbContext.Authors.Find(game.Author.ID);
+            game.Author = _dbContext.Authors.Find(game.Author.ID);
             _dbContext.Add(game);
             Save();
         }
