@@ -18,6 +18,7 @@ namespace GamesStore_11883_API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            // Make request to the AuthorRepository
             var author = _authorRepository.GetAuthor();
             return new OkObjectResult(author);
         }
@@ -25,6 +26,7 @@ namespace GamesStore_11883_API.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
+            // Make request to the AuthorRepository
             var author = _authorRepository.GetAuthorById(id);
             if (author != null)
             {
@@ -38,6 +40,7 @@ namespace GamesStore_11883_API.Controllers
         {
             using (var scope = new TransactionScope())
             {
+                // Make request to the AuthorRepository
                 _authorRepository.InsertAuthor(author);
                 CompleteScope(scope);
                 return CreatedAtAction(nameof(Get), new { id = author.ID }, author);
@@ -51,6 +54,7 @@ namespace GamesStore_11883_API.Controllers
             {
                 using (var scope = new TransactionScope())
                 {
+                    // Make request to the AuthorRepository
                     _authorRepository.UpdateAuthor(author);
                     CompleteScope(scope);
                     return new OkObjectResult(new { message = "Successfuly Updated", status = 202 });
@@ -62,10 +66,12 @@ namespace GamesStore_11883_API.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
+            // Make request to the AuthorRepository
             _authorRepository.DeleteAuthor(id);
             return new OkObjectResult(new { message = "Successfuly Deteled", status = 204 });
         }
 
+        // DRY Principle to complete used scope
         public void CompleteScope(TransactionScope scope)
         {
             scope.Complete();

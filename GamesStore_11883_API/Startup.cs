@@ -24,7 +24,7 @@ namespace GamesStore_11883_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            // Configuration and connection db instance
             services.AddDbContext<GameContext>(
                 o => o.UseSqlServer(Configuration.GetConnectionString("GameAPIDB")
                 .Replace(DataDirectory, _appPath))
@@ -32,6 +32,7 @@ namespace GamesStore_11883_API
             services.AddControllers();
             services.AddTransient<IGameRepository, GameRepository>();
             services.AddTransient<IAuthorRepository, AuthorRepository>();
+            // Setup CORS Policy Configuration
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAllOrigins",
@@ -53,11 +54,10 @@ namespace GamesStore_11883_API
             {
                 app.UseDeveloperExceptionPage();
             }
+            // Enable CORS Policy Configuration
             app.UseCors("AllowAllOrigins");
 
             app.UseRouting();
-
-            
 
             app.UseAuthorization();
 

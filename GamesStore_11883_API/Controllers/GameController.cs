@@ -19,6 +19,7 @@ namespace GamesStore_11883_API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            // Make request to the GameRepository
             var games = _gameRepository.GetGames();
             return new OkObjectResult(games);
         }
@@ -26,6 +27,7 @@ namespace GamesStore_11883_API.Controllers
         [HttpGet, Route("{id}")]
         public IActionResult Get(int id)
         {
+            // Make request to the GameRepository
             var game = _gameRepository.GetGameById(id);
             if(game != null) {
                 return new OkObjectResult(game);
@@ -39,6 +41,7 @@ namespace GamesStore_11883_API.Controllers
         {
             using (var scope = new TransactionScope())
             {
+                // Make request to the GameRepository
                 _gameRepository.InsertGame(game);
                 CompleteScope(scope);
                 return CreatedAtAction(nameof(Get), new { id = game.ID }, game);
@@ -52,6 +55,7 @@ namespace GamesStore_11883_API.Controllers
             {
                 using (var scope = new TransactionScope())
                 {
+                    // Make request to the GameRepository
                     _gameRepository.UpdateGame(game);
                     CompleteScope(scope);
                     return new OkObjectResult(new { message = "Successfuly Updated", status = 202 });
@@ -63,12 +67,12 @@ namespace GamesStore_11883_API.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
+            // Make request to the GameRepository
             _gameRepository.DeleteGame(id);
             return new OkObjectResult( new { message="Successfuly Deteled", status = 204 });
         }
 
-        // DRY Principle
-
+        // DRY Principle to complete used scope
         public void CompleteScope(TransactionScope scope)
         {
             scope.Complete();
