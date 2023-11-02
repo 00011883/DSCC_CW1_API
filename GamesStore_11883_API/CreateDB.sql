@@ -16,7 +16,7 @@ go
 use GameAPIDB 
 GO
 /*******************************************************************************
-   Create Tables
+    Create Tables
 ********************************************************************************/
 GO
 CREATE TABLE [dbo].[Authors]
@@ -43,6 +43,8 @@ CREATE TABLE [dbo].[Games]
     CONSTRAINT [FK_Game_Author_Id] FOREIGN KEY ([AuthorId]) REFERENCES [dbo].[Authors]([ID])
 );
 GO
+
+-- Authors table population
 
 INSERT INTO [dbo].[Authors]
 ([Name], [Description], [PosterUrl])
@@ -72,6 +74,8 @@ VALUES (
     'Mundfish is a vIdeo game development company based in Russia. The company was founded in 2016 and is focused on creating unique and innovative games that provIde players with immersive and engaging experiences.', 
     'https://trademarks.justia.com/media/og_image.php?serial=88188420'
 )
+
+-- Games table population
 
 INSERT INTO [dbo].[Games]
 ([Name], [Description], [ShortDescription], [Price], [PosterUrl], [ImgUrl], [Logo], [AuthorId])
@@ -134,15 +138,3 @@ VALUES (
     1
 )
 GO
-
-/*
-
-DROP TABLE [dbo].[Games]
-DROP TABLE [dbo].[Authors]
-
-select *
-from [dbo].[Games]
-select *
-from [dbo].[Authors]
-
-*/
